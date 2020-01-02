@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
