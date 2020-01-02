@@ -1,0 +1,25 @@
+section {
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 25% 50% 25%;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.login {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+.user-name {
+    color:white;
+    font-size: x-large;
+    width: 85%;
+}
