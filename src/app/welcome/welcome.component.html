@@ -3,7 +3,11 @@
     <form  [formGroup]="loginForm" (keydown.enter)="login($event)" class="login">
         <mat-form-field class="user-name">
             <input formControlName="name" required matInput placeholder="User name">
-            <mat-error *ngIf="loginForm.controls.name.errors.required">Name is required</mat-error>
+            <mat-error 
+                *ngIf="loginForm.controls.name.errors 
+                && loginForm.controls.name.errors.required">
+                Name is required
+            </mat-error>
         </mat-form-field>
     </form>
 </section>

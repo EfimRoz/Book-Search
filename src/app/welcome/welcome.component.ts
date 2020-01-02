@@ -21,10 +21,11 @@ export class WelcomeComponent implements OnInit {
   }
   
   login(event: Event) {
-    // console.log('this', this.loginForm)
     if (this.loginForm.valid === false){
       return;
     }
+    const name = this.loginForm.controls.name.value;
+    this.loginForm;
     this.storeService.setName(name);
     this.router.navigate(['/search']);
     event.preventDefault();

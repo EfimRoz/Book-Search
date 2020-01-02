@@ -9,13 +9,14 @@ export class StoreService {
   private name: string;
 
   public setName(name: string): void {
+    console.log('setting name:', name);
     if(name) {
       this.name = `${name}`;
     }
   }
   public getName(): string {
-    if(name) {
-      return `${name}`;
+    if(this.name) {
+      return `${this.name}`;
     }
     else {
       return '';
