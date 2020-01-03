@@ -1,1 +1,23 @@
-<h1>Welcome, {{name}}</h1>
+<section>
+    <h1>Welcome, {{name}}</h1>
+
+    <form  [formGroup]="bookForm" (keydown.enter)="search($event)">
+        <mat-form-field class="book-name">
+            <input formControlName="bookName" required matInput placeholder="Book">
+            <mat-error 
+                *ngIf="bookForm.controls.bookName.errors 
+                && bookForm.controls.bookName.errors.required">
+                Value is required
+            </mat-error>
+        </mat-form-field>
+    </form>
+
+    <mat-list dense *ngIf="books">
+        <h3 matSubheader>Books found:</h3>
+        <mat-list-item *ngFor="let book of books.items">
+            <mat-icon matListIcon>book</mat-icon>
+            <h4 matLine>{{book.volumeInfo.authors}}</h4>
+            <p matLine> {{book.volumeInfo.title}} </p>
+        </mat-list-item>
+    </mat-list>
+</section>

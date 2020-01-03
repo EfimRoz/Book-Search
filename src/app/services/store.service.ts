@@ -9,7 +9,6 @@ export class StoreService {
   private name: string;
 
   public setName(name: string): void {
-    console.log('setting name:', name);
     if(name) {
       this.name = `${name}`;
     }
