@@ -1,17 +1,13 @@
+@import "../../variables.scss";
 section {
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr 5fr 1fr 2fr;
     grid-template-rows: 1fr 2fr 1fr 6fr;
-    // grid-template-areas:
-    //     ". . header . . nav-button"
-    //     ". . . . ."
-    //     ". search-bar search-bar . . ."
-    //     "results"
 }
 h1 {
-    color: white;
+    color: $title-color;
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
@@ -25,13 +21,16 @@ form {
     grid-row-end: 4;
     .book-name{
         width: 100%;
-        font-size: x-large;
+        font-size: $input-font-size;
+        color: $input-color;
     }
 }
-mat-list {
+.books-list {
     grid-area: results;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 4;
     grid-row-end: 5;
+    max-height: 100%;
+    overflow-y: scroll;
 }

@@ -11,13 +11,11 @@
             </mat-error>
         </mat-form-field>
     </form>
-
-    <mat-list dense *ngIf="books">
-        <h3 matSubheader>Books found:</h3>
-        <mat-list-item *ngFor="let book of books.items">
+    <mat-action-list dense *ngIf="books" class="books-list">
+        <mat-list-item *ngFor="let book of books.items" class="book">
             <mat-icon matListIcon>book</mat-icon>
-            <h4 matLine>{{book.volumeInfo.authors}}</h4>
-            <p matLine> {{book.volumeInfo.title}} </p>
+            <h4 matLine> {{book.volumeInfo.title}} </h4>
+            <p matLine> {{book.volumeInfo.authors}} </p>
         </mat-list-item>
-    </mat-list>
+      </mat-action-list>
 </section>
