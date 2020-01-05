@@ -29,12 +29,16 @@ export class SearchComponent implements OnInit {
     this.bookForm = new FormGroup({
       bookName: new FormControl('', [Validators.required]),
     });
-    const booksSub = this.searchService.getBooks('Harry');
-    booksSub.subscribe((books) => {
+  }
+
+  search(event: Event): void {
+    const bookName = this.bookForm.controls.bookName.value;
+    const booksSub = this.searchService.getBooks(bookName);
+    const subscribtion = booksSub.subscribe((books) => {
       this.books = books;
-      console.log('books:', books);
-    })
-    
+      subscribtion.unsubscribe();
+    });
+    event.preventDefault();
   }
 
 }
