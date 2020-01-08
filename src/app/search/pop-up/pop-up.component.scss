@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 5fr 1fr;
+}
+h2 {
+    font: 500 17px/25px Roboto,"Helvetica Neue",sans-serif
+}
+.description {
+    max-height: 100%;
+    overflow-y: auto;
+    max-height: calc(100% - 2em);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.action-buttons { 
+    display: flex;
+    justify-content: space-between;
+}

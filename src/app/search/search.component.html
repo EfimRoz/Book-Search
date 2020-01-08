@@ -11,7 +11,7 @@
         </mat-form-field>
     </form>
     <mat-action-list dense *ngIf="books" class="books-list">
-        <mat-list-item *ngFor="let book of books.items" class="book">
+        <mat-list-item *ngFor="let book of books.items" (click)="showMore(book)" class="book">
             <mat-icon matListIcon>book</mat-icon>
             <h4 matLine> {{book.volumeInfo.title}} </h4>
             <p matLine> {{book.volumeInfo.authors}} </p>

@@ -1,0 +1,12 @@
+<section class="container">
+  <h1 mat-dialog-title>{{data.book.volumeInfo.title}}</h1>
+  <h2>{{data.book.volumeInfo.subtitle}}</h2>
+  <h3>{{formatedAuthors}}</h3>
+  <article mat-dialog-content>
+    <p class="description">{{data.book.volumeInfo.description}}</p>
+  </article>
+  <div class="action-buttons" mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="true">Close</button>
+    <button mat-button cdkFocusInitial>Add to wishlist</button>
+  </div>
+</section>
