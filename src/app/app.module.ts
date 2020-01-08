@@ -10,6 +10,7 @@ import { MatListModule} from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,6 +32,7 @@ import { PopUpComponent } from './search/pop-up/pop-up.component';
     MatIconModule,
     MatDialogModule,
     MatButtonModule,
+    MatTooltipModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],

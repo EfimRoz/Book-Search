@@ -13,7 +13,7 @@
     <mat-action-list dense *ngIf="books" class="books-list">
         <mat-list-item *ngFor="let book of books.items" (click)="showMore(book)" class="book">
             <!-- <mat-icon matListIcon>book</mat-icon> -->
-            <img matListAvatar [src]="book.volumeInfo.imageLinks.smallThumbnail" alt="...">
+            <img matListAvatar [src]="book.volumeInfo.imageLinks.smallThumbnail">
             <h4 matLine> {{book.volumeInfo.title}} </h4>
             <p matLine> {{book.volumeInfo.authors}} </p>
         </mat-list-item>

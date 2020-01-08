@@ -5,8 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class StoreService {
 
-  constructor() { }
   private name: string;
+  private books: string[];
+
+  constructor() {
+    this.initVariables();
+  }
+
+  private initVariables(): void{
+    this.books = [];
+  }
 
   public setName(name: string): void {
     if(name) {
@@ -20,6 +28,18 @@ export class StoreService {
     else {
       return '';
     }
+  }
+
+  public addBook(volumeId: string): void {
+    this.books.push(volumeId);
+  }
+
+  public removeBook(volumeId: string): void {
+    let index = this.books.findIndex( bookId => bookId === volumeId );
+    if(index === -1) {
+      return; // no index found
+    }
+    this.books.splice(index, 1);
   }
 
 }

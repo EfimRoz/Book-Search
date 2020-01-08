@@ -1,10 +1,37 @@
 .container {
     height: 100%;
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 5fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "title thumbnail"
+        "subtitle thumbnail"
+        "authors thumbnail"
+        "description description"
+        "buttons buttons";
+}
+h1 {
+    grid-area: title;
 }
 h2 {
-    font: 500 17px/25px Roboto,"Helvetica Neue",sans-serif
+    grid-area: subtitle;
+    max-height: 68%;
+    font: 500 17px/25px Roboto,"Helvetica Neue",sans-serif;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+h3 {
+    grid-area: authors;
+}
+.book-cover {
+    grid-area: thumbnail;
+    max-height: 100%;
+    width: auto;
+}
+article {
+    grid-area: description;
 }
 .description {
     max-height: 100%;
@@ -13,7 +40,8 @@ h2 {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.action-buttons { 
+.action-buttons {
+    grid-area: buttons;
     display: flex;
     justify-content: space-between;
 }

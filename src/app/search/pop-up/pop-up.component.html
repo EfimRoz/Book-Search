@@ -1,7 +1,8 @@
 <section class="container">
   <h1 mat-dialog-title>{{data.book.volumeInfo.title}}</h1>
-  <h2>{{data.book.volumeInfo.subtitle}}</h2>
+  <h2 [matTooltip]="data.book.volumeInfo.subtitle">{{data.book.volumeInfo.subtitle}}</h2>
   <h3>{{formatedAuthors}}</h3>
+  <img [src]="data.book.volumeInfo.imageLinks.thumbnail" class="book-cover">
   <article mat-dialog-content>
     <p class="description">{{data.book.volumeInfo.description}}</p>
   </article>
