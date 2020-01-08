@@ -13,6 +13,10 @@ export class PopUpComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) private data: any) { }
 
   ngOnInit() {
+    this.formatAuthors();
+  }
+
+  private formatAuthors(): void {
     console.log('recived this book:', this.data.book)
     if(this.data.book.volumeInfo.authors) {
       let authors: string = '';
