@@ -15,13 +15,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PopUpComponent } from './search/pop-up/pop-up.component';
+import { WishListComponent } from './wish-list/wish-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     SearchComponent,
-    PopUpComponent
+    PopUpComponent,
+    WishListComponent
   ],
   imports: [
     BrowserModule,

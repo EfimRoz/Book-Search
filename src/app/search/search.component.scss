@@ -3,22 +3,17 @@ section {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr 5fr 1fr 2fr;
-    grid-template-rows: 1fr 2fr 1fr 6fr;
+    grid-template: $main-grid-template;
 }
 h1 {
     color: $title-color;
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-area: header;
+}
+.wishlist {
+    grid-area: nav-button;
 }
 form {
-    grid-area: search-bar;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-area: input;
     .book-name{
         width: 100%;
         font-size: $input-font-size;
@@ -26,11 +21,6 @@ form {
     }
 }
 .books-list {
-    grid-area: results;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    max-height: 100%;
+    grid-area: list;
     overflow-y: scroll;
 }

@@ -1,8 +1,9 @@
 <section>
     <h1>Welcome, {{name}}</h1>
+    <button routerLink="/wishlist" routerLinkActive="active"mat-raised-button class="wishlist" tabindex="2">Whishlist</button>
     <form  [formGroup]="bookForm" (keydown.enter)="search($event)">
         <mat-form-field class="book-name">
-            <input formControlName="bookName" required matInput placeholder="Book">
+            <input formControlName="bookName" tabindex="1" required matInput placeholder="Book">
             <mat-error 
                 *ngIf="bookForm.controls.bookName.errors 
                 && bookForm.controls.bookName.errors.required">
